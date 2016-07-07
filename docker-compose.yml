@@ -1,0 +1,12 @@
+waypointapp:
+  build: .
+  ports:
+    - "5757:5757"
+  environment:
+    ENV: DEV
+  volumes:
+  # realdir:containerdir
+  - ./app:/app
+  - /mnt/srv/public:/public
+  - ./data:/data
+

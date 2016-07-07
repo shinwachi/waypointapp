@@ -1,0 +1,66 @@
+{% extends "bootstrap/base.html" %}
+
+
+{% block content %}
+
+<div id = "idx">
+<h1>{{ app_name }}: {{ run_id }}</h1>
+
+
+<ul>
+	{% for x in tableNames %}
+		<a href="{{ x }}">{{ x }}</a> <br>
+	{% endfor %}
+</ul>
+</div>
+
+<ul>
+	{% for x in imagetags %}
+		{{ x|safe }}
+	{% endfor %}
+</ul>
+
+
+{% for k, v in dbTables.iteritems() %}
+	<div id="{{ k }}">
+		<h2> {{ k }} </h2>
+		<a href="#idx">index</a>
+		<table style="width:100%" class="table-bordered">
+			<tr>
+			{% for x in colnames[k] %}
+				<th> {{ x }} </th>
+			{% endfor %}
+			</tr>
+			{% for tablerow in dbTables[k] %}
+				<tr>
+					{% for x in tablerow %}
+						<td>{{ x|safe }}</td>
+					{% endfor %}
+				</tr>
+			{% endfor %}
+		</table>
+	</div>
+{% endfor %}
+
+
+<h2> filenames </h2>
+<ul>
+	{% for x in filenames %}
+		{{ x }}<br>
+	{% endfor %}
+</ul>
+
+
+<h2> filepaths </h2>
+<ul>
+	{% for x in filepaths %}
+		{{ x }} <br>
+	{% endfor %}
+</ul>
+
+<ul>
+	{% for x in dbpaths %}
+		{{ x }} <br>
+	{% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+
+
+<h1>WaypointApp</h1>
+
+
+<ul>
+	{% for app_name in appNames %}
+		<a href="{{ url_for('reportAppIndex', appName=app_name)}}">{{ app_name }}</a> <br>
+	{% endfor %}
+</ul>
+
+
+
+

@@ -1,0 +1,13 @@
+{
+"applications":[
+    {
+      "appName": "assay1",
+      "analysisDir": "../data/example/assay1",
+      "tableOrder": ["table1"]
+    },
+    {
+      "appName": "assay2",
+      "analysisDir": "../data/example/assay2"
+    }
+  ]
+}

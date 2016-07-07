@@ -1,0 +1,8 @@
+<h1>{{ app_name }}</h1>
+
+<ul>
+	{% for app_name, run_id in answer %}
+		<a href="{{ url_for('report_app', app_name=app_name, run_id=run_id) }}">{{ app_name }}:{{run_id}}</a> <br>
+	{% endfor %}
+</ul>
+
