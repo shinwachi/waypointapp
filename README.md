@@ -1,14 +1,12 @@
-# README #
+# waypointapp #
 
 ### What is this repository for? ###
 
-* Quick summary
 Displays the content of "waypoint" database tables in SQLite format.
 
 
 ### How do I get set up? ###
 
-* Summary of set up
 1. Identify the assay folder
 2. Set up docker volume to have access to the assay folder(s)
 3. Point the configuration file to the assay folder(s)
@@ -16,8 +14,16 @@ Displays the content of "waypoint" database tables in SQLite format.
 
 * Configuration
 
+If you have an assay folder mounted which you'd like to use (instead of the included /data), then modify docker-compose.yml:
+
+e.g.: ```/mnt/srv/public:/public```
+
+
 * Dependencies
-* Docker
+
+The easiest way is to get [Docker](https://www.docker.com/products/overview).
+
+If you would like to run this without container, then please take a look at the Dockerfile for what is done to set it up, especially the `pip install` section. Virtual environment is recommended.
 
 * Database configuration
 * Assay fodler files must be accesible to the docker container through docker volume
@@ -28,9 +34,11 @@ Displays the content of "waypoint" database tables in SQLite format.
 ### Contribution guidelines ###
 
 * Writing tests
-1. This is a dead simple server, but if there should be any tests, it shuld be to ensure that all assay folders in the config are accessible
+
+This is a dead simple server, but if you want tests, it shuld be to ensure that all assay folders in the config are accessible
 
 * Other guidelines
+
 
 ### Who do I talk to? ###
 
