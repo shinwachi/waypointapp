@@ -1,7 +1,9 @@
 waypointapp:
   build: .
   ports:
-    - "5757:5757"
+  # host:container
+    - "5858:5757"
+    - "5888:8888"
   environment:
     ENV: DEV
   volumes:

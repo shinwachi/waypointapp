@@ -12,12 +12,17 @@ Displays the content of "waypoint" database tables in SQLite format.
 3. Point the configuration file to the assay folder(s)
 4. docker-compose up
 
+To build the image: docker-compose build
+
 * Configuration
 
 If you have an assay folder mounted which you'd like to use (instead of the included /data), then modify docker-compose.yml:
 
 e.g.: ```/mnt/srv/public:/public```
 
+
+to kill:
+ sudo docker-compose kill -s SIGINT
 
 * Dependencies
 
